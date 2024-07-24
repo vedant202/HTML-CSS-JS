@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .hero {
+            display: grid;
+            align-items: center;
+            gap: 2em;
+        }
+
+        @media (min-width: 960px) {
+            .hero {
+                grid: auto / repeat(2, 1fr);
+            }
+        }
+
+        .title {
+            font-weight: 900;
+            font-style: italic;
+            font-size: 3rem;
+            color: #ee6352;
+            line-height: 0.8;
+            margin: 0 0 0.5em;
+            text-transform: uppercase;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="hero-text">
+            <h1 class="title">The picture element is really awesome</h1>
+            <p>
+                It let’s us serve up completely different images depending on the
+                situation at hand.
+            </p>
+        </div>
+        
+        <picture>
+            <source media="(min-width:960px)" srcset="./the-picture-element/images/all-business-large.jpg" />
+
+            <source media="(min-width:768px)" srcset="./the-picture-element/images/all-business-medium.jpg" />
+
+            <source media="(min-width:365px)" srcset="./the-picture-element/images/all-business-small.jpg" />
+
+            <img decoding="sync" loading="lazy" src="./the-picture-element/images/all-business-small.jpg" alt=""
+                srcset="" fetchpriority="high" />
+        </picture>
+    </div>
+</body>
+
+</html>

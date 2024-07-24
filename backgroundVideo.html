@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Videos</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-clip: padding-box;
+        }
+        .container h1{
+            text-align: center;
+            margin: 30px 0px;
+            font-size: 40px;
+        }
+        .parent{
+            /* background-color: #757070; */
+            height: 50vw;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(90deg, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.4), transparent);
+            overflow: hidden;
+        }
+        .video-bg{
+            position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    min-height: 100%;
+    z-index: -1;
+
+        }
+        .child{
+           
+            color: white;
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 156px;
+            
+        }
+       
+        .rows{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .col{
+            width: 30%;
+            text-align: justify;
+    line-height: 24px;
+    font-size: 19px;
+        }
+
+        @media (max-width:710px) {
+            .child{
+                font-size: 1.8em;
+            }
+        }
+        @media (max-width:768px) {
+            html {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                width: 100%;
+            }
+            .container{
+                width: 80%;
+                margin: 10%;
+            }
+            .container h1{
+                font-size: 28px;
+                width: 90%;
+                margin: 0 5%;
+            }
+            .rows{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+            .col{
+                width: 100%;
+        text-align: justify;
+        line-height: 19px;
+        font-size: 14px;
+        margin: 15px 0;
+            }
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <video class="video-bg" autoplay muted loop>
+            <source src="./swan swim.mp4" type="video/mp4">
+        </video>
+        <div class="child">Welcome to our page</div>
+    </div>
+
+    <div class="container">
+        <h1 >About Ourselves</h1>
+        <div class="rows">
+            <div class="col">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, nihil tempore eos earum fuga architecto nostrum atque praesentium minus id! Perferendis quae doloremque quisquam expedita est eius, corporis odio atque ab molestias eveniet vel repudiandae commodi distinctio itaque aperiam ducimus quas unde, reiciendis dolore blanditiis omnis eligendi velit. Quis iusto sunt corrupti quod fugiat dolor a rerum aliquid voluptatem quibusdam. Inventore quibusdam aperiam esse nulla alias enim fugit harum excepturi illum quasi, unde vel, quod cupiditate cum voluptate aliquid nostrum, asperiores pariatur. Est placeat delectus mollitia possimus alias molestiae? Assumenda veniam iure, rerum ea vel delectus fugiat vitae dolorum voluptatibus.</div>
+            
+            <div class="col">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio nisi dolores repellendus neque sit. Enim, iusto rem. Totam numquam libero doloribus dolorem? Sapiente culpa hic libero vitae optio earum esse. Non temporibus, eligendi omnis placeat, quam architecto culpa, consectetur quae eaque veritatis molestiae corrupti ea modi sunt a ut autem vero quidem ipsum tempore eos corporis eum quaerat. Eligendi vero minus, nostrum consectetur, quae deserunt fuga iste quibusdam et porro minima hic quaerat sapiente ab unde, dolorum animi. Quibusdam dolorum aliquid facere perferendis cumque? Atque dolore tempora quisquam asperiores eos harum veniam culpa sed, hic, tenetur architecto doloribus nulla labore.</div>
+
+            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsa magnam quae ratione. Asperiores distinctio eum voluptatum ex eveniet dolor quas? Quis amet dolores repellat est facere fuga animi ex. Aliquid assumenda dolorum totam facilis iure provident reiciendis blanditiis porro praesentium laborum! Non cum facilis commodi accusantium voluptas veniam quia recusandae ad illum natus nulla atque, vero amet aspernatur laboriosam eum temporibus! Excepturi incidunt quidem nam quibusdam magnam aliquam, facilis illo officiis soluta maiores possimus vel accusamus tempora fugit in dolore dolores expedita suscipit. Vero qui itaque facilis necessitatibus magni. Culpa, quos nemo ab unde neque voluptatem. Beatae, minus quasi!</div>
+        </div>
+    </div>
+</body>
+</html>

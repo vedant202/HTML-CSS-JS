@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.skeleton{
+    opacity: .7;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-text{
+    width: 100%;
+    height: .5rem;
+    margin-bottom: .25rem;
+    border-radius: .125rem;
+}
+
+
+@keyframes skeleton-loading {
+    0%{
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100%{
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.cards{
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20px;
+        margin: 20px;
+}
+.card{
+    width: 30%;
+    box-shadow: 0 0 12px 9px #00000061;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+    min-height: 34%;
+}
+.profile{
+    border-radius: 50%;
+}
+.header > .profile{
+      width: 100px;
+      height: 100px;
+    overflow: hidden;
+    /* height: 100px; */
+}
+.profile > img{
+    max-width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+
+}
+.title{
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex-grow: 1;
+  width: 100%;
+}
+
+@media (min-width:1300px) {
+    .cards{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+        margin: 20px;
+    }
+
+    .card{
+        max-width: 32%;
+        min-width: 350px;
+        /* border: 1px solid rgb(128 128 128 / 0%); */
+        box-shadow: 0 0 12px 9px #00000061;
+        padding: 10px 10px;
+        border-radius: 5px;
+        padding: 10px 0;
+    }
+    .header{
+        display: grid;
+        grid-template-columns: 25% auto;
+        align-items: center;
+        min-height: 34%;
+    }
+    .header > .profile{
+      
+        width: 100%;
+        
+        height: 90%;
+        overflow: hidden;
+        /* height: 100px; */
+    }
+    .profile > img{
+        max-width: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+
+    }
+    .title{
+            font-weight: bold;
+            font-size: 1.25rem;
+            text-transform: capitalize;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            flex-grow: 1;
+          width: 100%;
+    }
+}
+
+@media (max-width:425px) {
+    .header{
+        min-height: 34%;
+    }
+    .card{
+        width: 70%;
+        box-shadow: 0 0 12px 9px #00000061;
+        padding: 10px 10px;
+        border-radius: 5px;
+    }
+    .header > .profile{
+      
+        width: 100px;
+      height: 100px;
+        overflow: hidden;
+        /* height: 100px; */
+    }
+    .profile > img{
+        max-width: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+    }
+    .title{
+        font-weight: bold;
+        font-size: 1.25rem;
+        text-transform: capitalize;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex-grow: 1;
+      width: 100%;
+}
+}
+
+
+
+
+
